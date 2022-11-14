@@ -24,6 +24,7 @@ pactWith(jestPactOptions, (provider) => {
           path: "/add-up",
           headers: {
             Accept: "application/json",
+            "Content-Type": "application/json; charset=UTF-8",
           },
           body: { num1: 5, num2: 5 },
         })

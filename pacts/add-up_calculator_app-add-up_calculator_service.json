@@ -13,7 +13,8 @@
         "method": "POST",
         "path": "/add-up",
         "headers": {
-          "Accept": "application/json"
+          "Accept": "application/json",
+          "Content-Type": "application/json; charset=UTF-8"
         },
         "body": {
           "num1": 5,
