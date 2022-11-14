@@ -1,0 +1,43 @@
+{
+  "consumer": {
+    "name": "Add-up calculator app"
+  },
+  "provider": {
+    "name": "Add-up calculator service"
+  },
+  "interactions": [
+    {
+      "description": "A request to add up two numbers",
+      "providerState": "A sum 5 with 5",
+      "request": {
+        "method": "POST",
+        "path": "/add-up",
+        "headers": {
+          "Accept": "application/json"
+        },
+        "body": {
+          "num1": 5,
+          "num2": 5
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": {
+          "result": 5
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

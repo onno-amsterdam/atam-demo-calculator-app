@@ -1,0 +1,17 @@
+{
+  "name": "pactjs-contract-test-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "devDependencies": {
+    "@pact-foundation/absolute-version": "0.0.4",
+    "@pact-foundation/pact": "^9.17.2",
+    "jest": "^27.5.1",
+    "jest-pact": "^0.9.3"
+  },
+  "scripts": {
+    "test:contract:consumer": "npx jest --testMatch=**/test/contract/consumer/** --runInBand --forceExit"
+  },
+  "author": "Onno van Piggelen",
+  "license": "ISC"
+}
