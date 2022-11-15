@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="/css/app.css" />
+</head>
+<body>
+  <h1 id="header">Calculator</h1>
+  <form
+    name="addUpForm"
+    action="javascript:;"
+    onsubmit="return submitForm(this);"
+  >
+    <p id="notANumberErrorNumber1">Not a number!</p>
+    <input type="text" id="number1" name="number1" value="number 1 here" />
+    <p id="notANumberErrorNumber2">Not a number!</p>
+    <input type="text" id="number2" name="number2" value="number 2 here" />
+    <input type="submit" id="calculateButton" value="Add up!" />
+  </form>
+  <p id="resultField">Result:</p>
+  <script type="module">
+    import submitForm from "./script/script.js";
+    import postAddUpRequest from "./script/add-up.client.js";
+    // this is needed to make the functions from the modules globally available
+    window.submitForm = submitForm;
+    window.postAddUpRequest = postAddUpRequest;
+  </script>
+</body>

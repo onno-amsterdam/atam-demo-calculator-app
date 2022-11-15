@@ -1,4 +1,7 @@
-function postAddUpRequest(
+/** This function is not covered in a unit test. A call to an outside dependency 
+should be covered in an integration or e2e test. It's important however that the 
+functions only makes the call and returns or resolves the result and does nothing else. */
+export default function postAddUpRequest(
   num1,
   num2,
   requestHost = "localhost",
@@ -7,6 +10,8 @@ function postAddUpRequest(
   return new Promise((resolve) => {
     const httpRequest = new XMLHttpRequest();
     httpRequest.open("POST", `http://${requestHost}:${requestPort}/add-up`);
+
+    // set headers to handle json
     httpRequest.setRequestHeader("Accept", "application/json");
     httpRequest.setRequestHeader(
       "Content-Type",
@@ -20,5 +25,3 @@ function postAddUpRequest(
     };
   });
 }
-
-module.exports = { postAddUpRequest };

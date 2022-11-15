@@ -6,23 +6,30 @@
   "devDependencies": {
     "@pact-foundation/absolute-version": "0.0.4",
     "@pact-foundation/pact": "^9.17.2",
+    "@playwright/test": "^1.27.1",
+    "@types/cors": "^2.8.12",
     "@types/jest": "^29.2.3",
+    "@types/lodash": "^4.14.189",
     "@types/sinon": "^10.0.13",
     "jest": "^27.5.1",
     "jest-pact": "^0.9.3",
+    "lodash": "^4.17.21",
     "nodemon": "^2.0.20",
     "sinon": "^14.0.2",
     "ts-jest": "^29.0.3"
   },
   "scripts": {
     "startServer": "nodemon ./server/server.ts",
+    "startWebApp": "nodemon ./webapp/webapp.js",
+    "test:fe-integration": "npx playwright test --config=webapp/test/fe-integration/playwright.mck.config.ts",
     "test:unit:server": "npx jest --config=jest-node.config.js --testMatch=**/server/test/unit/**",
-    "test:contract:consumer": "npx jest --testMatch=**/test/contract/consumer/** --runInBand --forceExit",
+    "test:contract:consumer": "npx jest --config=jest.config.js --testMatch=**/test/contract/consumer/** --runInBand --forceExit",
     "test:contract:provider": "npx jest --config=jest-node.config.js --testMatch=**/test/contract/provider/** --runInBand --forceExit"
   },
   "author": "Onno van Piggelen",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2"
   }
 }

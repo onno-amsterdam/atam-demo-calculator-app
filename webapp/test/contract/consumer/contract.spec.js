@@ -1,7 +1,7 @@
 const { pactWith } = require("jest-pact");
 const { Interaction, Matchers } = require("@pact-foundation/pact");
 
-const { postAddUpRequest } = require("../../../add-up.client");
+const { postAddUpRequest } = require("../../../public/script/script");
 
 const jestPactOptions = {
   consumer: "Add-up calculator app",
