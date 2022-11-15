@@ -15,9 +15,10 @@
     "ts-jest": "^29.0.3"
   },
   "scripts": {
-    "startServer": "nodemon ./server/app.ts",
+    "startServer": "nodemon ./server/server.ts",
+    "test:unit:server": "npx jest --config=jest-node.config.js --testMatch=**/server/test/unit/**",
     "test:contract:consumer": "npx jest --testMatch=**/test/contract/consumer/** --runInBand --forceExit",
-    "test:contract:provider": "npx jest --config=jest-provider.config.js --testMatch=**/test/contract/provider/** --runInBand --forceExit"
+    "test:contract:provider": "npx jest --config=jest-node.config.js --testMatch=**/test/contract/provider/** --runInBand --forceExit"
   },
   "author": "Onno van Piggelen",
   "license": "ISC",

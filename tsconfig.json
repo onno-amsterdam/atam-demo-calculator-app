@@ -1,22 +1,17 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "esModuleInterop": true,
-        "target": "es6",
-        "noImplicitAny": true,
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*"
-            ]
-        },
-        "types": ["jest"]
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"]
     },
-    "include": [
-        "src/**/*",
-        "test/**/*"
-    ]
+    "types": ["jest"]
+  },
+  "include": ["src/**/*", "webapp/test/**/*", "server/test/contract/contract.spec.ts"]
 }

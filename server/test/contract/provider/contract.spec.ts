@@ -3,8 +3,8 @@ import { Server } from "http";
 import path from "path";
 import sinon from "sinon";
 
-import { app } from '../../../server/app';
-import * as addUp from "../../../server/calculator";
+import { app } from '../../../app';
+import * as addUp from "../../../calculator";
 
 let server: Server;
 let executeAddUp: any;
