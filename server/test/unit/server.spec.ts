@@ -73,7 +73,7 @@ describe('addUpNumbers controller', () => {
         await addUpNumbers(request, response);
 
         // ASSERT
-        expect(addUpStub.calledOnce).toEqual(true);
+        expect(addUpStub.calledOnce).toEqual(false);
         expect(response.status.calledWithMatch(204)).toEqual(true);
 
         // CLEAN UP
