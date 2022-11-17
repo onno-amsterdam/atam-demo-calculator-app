@@ -10,12 +10,25 @@
     action="javascript:;"
     onsubmit="return submitForm(this);"
   >
-    <p id="notANumberErrorNumber1">Not a number!</p>
-    <input type="text" id="number1" name="number1" value="number 1 here" />
-    <p id="notANumberErrorNumber2">Not a number!</p>
-    <input type="text" id="number2" name="number2" value="number 2 here" />
+    <p id="notANumberErrorNumber1" style="display: none">Not a number!</p>
+    <input
+      type="text"
+      id="number1"
+      name="number1"
+      placeholder="number 1 here"
+    />
+    <p id="notANumberErrorNumber2" style="display: none">Not a number!</p>
+    <input
+      type="text"
+      id="number2"
+      name="number2"
+      placeholder="number 2 here"
+    />
     <input type="submit" id="calculateButton" value="Add up!" />
   </form>
+  <p id="somethingWentWrongError" style="display: none">
+    Something went wrong! Try again!
+  </p>
   <p id="resultField">Result:</p>
   <script type="module">
     import submitForm from "./script/script.js";
