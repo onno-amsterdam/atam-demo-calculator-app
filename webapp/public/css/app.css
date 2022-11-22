@@ -1,0 +1,40 @@
+.container {
+    text-align: center;
+    width: 200px;
+    margin: auto;
+    border: 1px;
+    border-style: solid;
+}
+
+#header {
+    margin-bottom: 0px;
+}
+
+form {
+    margin:auto;
+    width: 90%;
+}
+
+.input {
+    position: relative;
+    margin: auto;
+    height: 50px;
+    padding: 5px;
+}
+
+#number1, #number2 {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin: auto;
+}
+
+#calculateButton {
+    margin-top: 15px;
+}
+
+.error {
+    color: red;
+    border-style: solid;
+}

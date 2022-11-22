@@ -6,6 +6,7 @@ export default async function submitForm(addUpForm) {
 
   const number1 = addUpForm.number1.value;
   const number2 = addUpForm.number2.value;
+
   const number1IsNotANumber = isNaN(number1);
   const number2IsNotANumber = isNaN(number2);
 
