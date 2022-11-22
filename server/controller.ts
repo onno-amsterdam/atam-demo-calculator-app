@@ -17,7 +17,7 @@ export async function addUpNumbers(req: any, res: any) {
     const result = await addUp(numbers.num1, numbers.num2);
     if (result) {
         res.status(200);
-        return res.send({ result: 10 });
+        return res.send({ result: result });
     } else {
         res.status(500);
         return res.send();

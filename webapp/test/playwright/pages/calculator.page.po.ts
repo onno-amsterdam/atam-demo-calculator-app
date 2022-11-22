@@ -13,6 +13,7 @@ export class CalculatorPage extends FullPageAssertions implements FullPagePageOb
     readonly resultField: Locator;
     readonly number1FieldError: Locator;
     readonly number2FieldError: Locator;
+    readonly somethingWentWrongError: Locator;
 
     // selectors
     readonly titleSelector: string = '#header';
@@ -22,6 +23,7 @@ export class CalculatorPage extends FullPageAssertions implements FullPagePageOb
     readonly resultFieldSelector: string = '#resultField';
     readonly number1FieldErrorSelector: string = '#notANumberErrorNumber1';
     readonly number2FieldErrorSelector: string = '#notANumberErrorNumber2';
+    readonly somethingWentWrongErrorSelector: string = '#somethingWentWrongError';
 
     constructor(page: Page) {
         super(page, 'Calculator', page.locator('body'));
@@ -35,6 +37,7 @@ export class CalculatorPage extends FullPageAssertions implements FullPagePageOb
         this.resultField = this.page.locator(this.resultFieldSelector);
         this.number1FieldError = this.page.locator(this.number1FieldErrorSelector);
         this.number2FieldError = this.page.locator(this.number2FieldErrorSelector);
+        this.somethingWentWrongError = this.page.locator(this.somethingWentWrongErrorSelector);
     }
 
     openPage() {
