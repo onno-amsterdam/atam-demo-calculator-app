@@ -11,4 +11,6 @@ app.get("/", function (res) {
   res.redirect("index.html");
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("WebApp listening on port: 3000");
+});

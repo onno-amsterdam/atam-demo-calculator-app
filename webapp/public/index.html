@@ -4,32 +4,42 @@
   <link rel="stylesheet" type="text/css" href="/css/app.css" />
 </head>
 <body>
-  <h1 id="header">Calculator</h1>
-  <form
-    name="addUpForm"
-    action="javascript:;"
-    onsubmit="return submitForm(this);"
-  >
-    <p id="notANumberErrorNumber1" style="display: none">Not a number!</p>
-    <input
-      type="text"
-      id="number1"
-      name="number1"
-      placeholder="number 1 here"
-    />
-    <p id="notANumberErrorNumber2" style="display: none">Not a number!</p>
-    <input
-      type="text"
-      id="number2"
-      name="number2"
-      placeholder="number 2 here"
-    />
-    <input type="submit" id="calculateButton" value="Add up!" />
-  </form>
-  <p id="somethingWentWrongError" style="display: none">
-    Something went wrong! Try again!
-  </p>
-  <p id="resultField">Result:</p>
+  <div class="container">
+    <h1 id="header">Calculator</h1>
+    <form
+      name="addUpForm"
+      action="javascript:;"
+      onsubmit="return submitForm(this);"
+    >
+      <div class="input">
+        <p class="error" id="notANumberErrorNumber1" style="display: none">
+          Not a number!
+        </p>
+        <input
+          type="text"
+          id="number1"
+          name="number1"
+          placeholder="number 1 here"
+        />
+      </div>
+      <div class="input">
+        <p class="error" id="notANumberErrorNumber2" style="display: none">
+          Not a number!
+        </p>
+        <input
+          type="text"
+          id="number2"
+          name="number2"
+          placeholder="number 2 here"
+        />
+      </div>
+      <input type="submit" id="calculateButton" value="Add up!" />
+    </form>
+    <p class="error" id="somethingWentWrongError" style="display: none">
+      Something went wrong! Try again!
+    </p>
+    <p id="resultField">Result:</p>
+  </div>
   <script type="module">
     import submitForm from "./script/script.js";
     import postAddUpRequest from "./script/add-up.client.js";
