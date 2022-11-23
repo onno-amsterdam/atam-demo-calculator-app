@@ -13,7 +13,6 @@ const config: PlaywrightTestConfig = {
     video: 'on-first-retry',
     trace: 'on-first-retry',
   },
-  // reporter: [['line'], ['allure-playwright']],
   retries: 0
 };
 export default config;
